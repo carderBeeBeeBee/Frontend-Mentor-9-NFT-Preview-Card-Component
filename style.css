@@ -1,0 +1,136 @@
+:root {
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+    --very-dark-blue-main: hsl(217, 54%, 11%); /*body BG*/
+    --very-dark-blue-card: hsl(216, 50%, 16%); /*container BG*/
+    --very-dark-blue-line: hsl(215, 32%, 27%); /*br*/
+}
+
+@font-face {
+    font-family: "Outfit";
+    src: url("./fonts/Outfit-VariableFont_wght.ttf");
+    font-weight: 300 400 600;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    color: var(--soft-blue);
+    font-family: "Outfit", sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+body {
+    background-color: var(--very-dark-blue-main);
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 88%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 25px;
+    background-color: var(--very-dark-blue-card);
+    border-radius: 20px;
+}
+
+.hero {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.top-section {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.top-section h1 {
+    color: white;
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-top: 4px;
+}
+
+.ethereum, .time, .author {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
+.ethereum {
+    color: var(--cyan);
+}
+
+.ethereum img, .time img {
+    height: 1rem;
+    object-fit: cover;
+}
+
+.ethereum p {
+    font-weight: 400;
+}
+
+hr {
+    border: 1px solid var(--very-dark-blue-line);
+}
+
+.author {
+    gap: 15px;
+}
+
+#avatar {
+    width: 30px;
+    border-radius: 50%;
+    border: 1px solid white;
+}
+
+.author p a {
+    color: white;
+    text-decoration: none;
+}
+
+.author p a:hover {
+    color: var(--cyan);
+}
+
+.bottom-section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.stats, .ethereum, .time, .author {
+    display: flex;
+}
+
+.stats, .author {
+    align-items: center;
+}
+
+.stats {
+    justify-content: space-between;
+}
+
+.top-section h1:hover, .hero {
+    cursor: pointer;
+    color: var(--cyan);
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
